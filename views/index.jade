@@ -11,7 +11,8 @@ block content
         - var cnt = 0;
         h1= allImages.name +", "+ allImages.state +", "+ allImages.country
         while cnt < x & cnt < allImages.length
-            img(src= allImages[cnt].images.medium.url, height= "187", width= 250)
+
+            img(src= allImages[cnt].images.medium.url, title= allImages[cnt].caption, height= "187", width= "250")
             - cnt++
 
-    h3 Click on the cities or towns to see photos of the best attractions at a same time. Click: mark place, Right click: See the result, zooming and locating as regular Google Maps
+    h3 Mark multiple cities or towns to see photos of the best attractions. Click: mark place, Right click: submit,  zooming and locating as regular Google Maps (67% browser zooming is recommended)

@@ -102,12 +102,22 @@ router.post('/', function(req, res) {
                 getPhotos(city_id, function (body1) {
                     //console.log(body1[0]);
 
-                    allImages[x] = body1;
-                    allImages[x].name = city;
-                    allImages[x].state = state;
-                    allImages[x].country = country;
-                    cnt++;
-                    x++;
+                    if(body1[0] == null){
+                        cnt++;
+                    }
+                    else {
+                        for(var image in body1){
+                            if(body1[image].caption == null)
+                                body1[image].caption = "no caption";
+                        }
+
+                        allImages[x] = body1;
+                        allImages[x].name = city;
+                        allImages[x].state = state;
+                        allImages[x].country = country;
+                        cnt++;
+                        x++;
+                    }
                 });
             }
         });
