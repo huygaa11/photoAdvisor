@@ -130,7 +130,7 @@ router.post('/', function(req, res) {
         } else {
             // Set location on form here if it isn't in getLocation()
             res.render('index', {
-                title: 'hello',
+                title: 'photoAdvisor by Hugo',
                 allImagesX: allImages
             });
         }
