@@ -63,7 +63,7 @@ router.get('/', function(req, res) {
     //    });
     //})
     res.render('index', {
-        title : 'hello',
+        title : 'photoAdvisor by Hugo',
         allImagesX : {}
     });
 
